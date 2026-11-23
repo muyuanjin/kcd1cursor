@@ -4,6 +4,8 @@ KCD1Cursor keeps custom cursor textures active when Kingdom Come: Deliverance re
 
 ## Install
 
+Download `kcd1cursor.zip` from the [latest release](https://github.com/muyuanjin/kcd1cursor/releases/latest) and extract the plugin.
+
 Put `kcd1cursor.asi` and the x64 Ultimate ASI Loader (`dinput8.dll`) beside `KingdomCome.exe` in `Bin/Win64`. Restart the game. `kcd1cursor.log` in the game root reports whether the hooks and Lua API loaded.
 
 ## Use from Lua
@@ -34,7 +36,7 @@ The plugin is written to `build/Release/kcd1cursor.asi`.
 
 ## Package
 
-After building, create the distribution archive from the plugin and its license notices.
+Pushing a version tag such as `v0.1.0` triggers GitHub Actions to build and publish `kcd1cursor.zip`. To package a local Release build, run the commands below.
 
 ```powershell
 Copy-Item -LiteralPath build/_deps/minhook-src/LICENSE.txt -Destination build/MinHook-LICENSE.txt
