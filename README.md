@@ -36,7 +36,9 @@ The plugin is written to `build/Release/kcd1cursor.asi`.
 
 ## Package
 
-Pushing a version tag such as `v0.1.0` triggers GitHub Actions to build and publish `kcd1cursor.zip`. To package a local Release build, run the commands below.
+Pushing a version tag such as `v0.1.0` triggers GitHub Actions to build and publish `kcd1cursor.zip`. To start the workflow manually for an existing tag, run `gh workflow run release.yml -f tag=v0.1.0`.
+
+To package a local Release build, run the commands below.
 
 ```powershell
 Copy-Item -LiteralPath build/_deps/minhook-src/LICENSE.txt -Destination build/MinHook-LICENSE.txt
